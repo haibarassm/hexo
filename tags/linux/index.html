@@ -3,20 +3,16 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>403 error solution for nginx in linux | sherryWeb</title>
+  <title>Tag: linux | sherryWeb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nginx 403 error solution Check the permissions on /,/root,/root/hexo/,/root/hexo/publictips : To easily display all the permissions on a path, you can use namei -om /path/to/check  To check if SELinux">
-<meta name="keywords" content="linux">
-<meta property="og:type" content="article">
-<meta property="og:title" content="403 error solution for nginx in linux">
-<meta property="og:url" content="http://sherryWeb.com/2019/06/25/403-error-solution-for-nginx-in-linux/index.html">
+  <meta name="keywords" content="java">
+<meta property="og:type" content="website">
+<meta property="og:title" content="sherryWeb">
+<meta property="og:url" content="http://sherryWeb.com/tags/linux/index.html">
 <meta property="og:site_name" content="sherryWeb">
-<meta property="og:description" content="nginx 403 error solution Check the permissions on /,/root,/root/hexo/,/root/hexo/publictips : To easily display all the permissions on a path, you can use namei -om /path/to/check  To check if SELinux">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-26T08:49:45.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="403 error solution for nginx in linux">
-<meta name="twitter:description" content="nginx 403 error solution Check the permissions on /,/root,/root/hexo/,/root/hexo/publictips : To easily display all the permissions on a path, you can use namei -om /path/to/check  To check if SELinux">
+<meta name="twitter:title" content="sherryWeb">
   
     <link rel="alternate" href="/atom.xml" title="sherryWeb" type="application/atom+xml">
   
@@ -69,81 +65,64 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-403-error-solution-for-nginx-in-linux" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/25/403-error-solution-for-nginx-in-linux/" class="article-date">
+        <section id="main">
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap animated rubberBand">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/06/26/linux/" class="archive-article-date">
+  <time class="post-time" datetime="2019-06-26T16:37:03.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">26</span>
+  </time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/06/26/linux/">linux</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/06/25/403-error-solution-for-nginx-in-linux/" class="archive-article-date">
   <time class="post-time" datetime="2019-06-25T07:24:03.000Z" itemprop="datePublished">
     <span class="post-month">6月</span><br/>
     <span class="post-day">25</span>
   </time>
 </a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
-    <h1 class="article-title" itemprop="name">
-      403 error solution for nginx in linux
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/06/25/403-error-solution-for-nginx-in-linux/">403 error solution for nginx in linux</a>
     </h1>
   
 
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="nginx-403-error-solution"><a href="#nginx-403-error-solution" class="headerlink" title="nginx 403 error solution"></a>nginx 403 error solution</h2><ol>
-<li><p>Check the permissions on /,/root,/root/hexo/,/root/hexo/public<br>tips : To easily display all the permissions on a path, you can use namei -om /path/to/check</p>
-</li>
-<li><p>To check if SELinux is running</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getenforce</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>To disable SELinux until next reboot</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenforce Permissive</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Restart Nginx and see if the problem persists. To allow nginx to serve your www directory (make sure you turn SELinux back on before testing this. i.e, setenforce Enforcing)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcon -Rt httpd_sys_content_t /root/hexo/public</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sherryWeb.com/2019/06/25/403-error-solution-for-nginx-in-linux/" data-id="cjxd0tij90000g5ad8ysn6adr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/06/26/linux/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          linux
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
 </article>
-
-
+  
+  
+    </div></section>
+  
 
 </section>
         

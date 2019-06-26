@@ -3,20 +3,20 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>403 error solution for nginx in linux | sherryWeb</title>
+  <title>git | sherryWeb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nginxnginx start/restart1234sudo systemctl start nginx  ``` after something change remember to reload nginx## firewall config  sudo firewall-cmd –permanent –zone=public –add-service=httpsudo firewall-">
-<meta name="keywords" content="java">
+  <meta name="description" content="set username and password of git groblelly in linux When running this command, the first time you pull or push from the remote repository, you’ll get asked about the username and password.Afterwards,">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="403 error solution for nginx in linux">
-<meta property="og:url" content="http://sherryWeb.com/2019/06/25/nginx/index.html">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://sherryWeb.com/2019/06/26/git/index.html">
 <meta property="og:site_name" content="sherryWeb">
-<meta property="og:description" content="nginxnginx start/restart1234sudo systemctl start nginx  ``` after something change remember to reload nginx## firewall config  sudo firewall-cmd –permanent –zone=public –add-service=httpsudo firewall-">
+<meta property="og:description" content="set username and password of git groblelly in linux When running this command, the first time you pull or push from the remote repository, you’ll get asked about the username and password.Afterwards,">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-26T08:33:43.966Z">
+<meta property="og:updated_time" content="2019-06-26T09:07:01.879Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="403 error solution for nginx in linux">
-<meta name="twitter:description" content="nginxnginx start/restart1234sudo systemctl start nginx  ``` after something change remember to reload nginx## firewall config  sudo firewall-cmd –permanent –zone=public –add-service=httpsudo firewall-">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="set username and password of git groblelly in linux When running this command, the first time you pull or push from the remote repository, you’ll get asked about the username and password.Afterwards,">
   
     <link rel="alternate" href="/atom.xml" title="sherryWeb" type="application/atom+xml">
   
@@ -45,7 +45,7 @@
     <div class="count-box">
       <a href="/archives"><div><strong>3</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -69,12 +69,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-nginx" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/25/nginx/" class="article-date">
-  <time class="post-time" datetime="2019-06-25T07:24:03.000Z" itemprop="datePublished">
+    <a href="/2019/06/26/git/" class="article-date">
+  <time class="post-time" datetime="2019-06-26T17:04:03.000Z" itemprop="datePublished">
     <span class="post-month">6月</span><br/>
-    <span class="post-day">25</span>
+    <span class="post-day">26</span>
   </time>
 </a>
    
@@ -86,7 +86,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      403 error solution for nginx in linux
+      git
     </h1>
   
 
@@ -101,43 +101,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><h2 id="nginx-start-restart"><a href="#nginx-start-restart" class="headerlink" title="nginx start/restart"></a>nginx start/restart</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx  </span><br><span class="line">``` </span><br><span class="line">after something change remember to reload nginx</span><br><span class="line">## firewall config</span><br></pre></td></tr></table></figure>
+        <h2 id="set-username-and-password-of-git-groblelly-in-linux"><a href="#set-username-and-password-of-git-groblelly-in-linux" class="headerlink" title="set username and password of git groblelly in linux"></a>set username and password of git groblelly in linux</h2><ol>
+<li><p>When running this command, the first time you pull or push from the remote repository, you’ll get asked about the username and password.<br>Afterwards, for consequent communications with the remote repository you don’t have to provide the username and password</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>set by yourselef</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your username&quot;</span><br><span class="line">git config --global user.password &quot;your password&quot;</span><br></pre></td></tr></table></figure>
 
-<p>sudo firewall-cmd –permanent –zone=public –add-service=http<br>sudo firewall-cmd –permanent –zone=public –add-service=https<br>sudo firewall-cmd –reload</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## check the nginx status</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="cancle-commits-but-is-not-push"><a href="#cancle-commits-but-is-not-push" class="headerlink" title="cancle commits but is not push"></a>cancle commits but is not push</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
 
-<p>sudo systemctl status nginx  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## set username and password of git groblelly in linux </span><br><span class="line">1. When running this command, the first time you pull or push from the remote repository, you&apos;ll get asked about the username and password.  </span><br><span class="line">Afterwards, for consequent communications with the remote repository you don&apos;t have to provide the username and password</span><br></pre></td></tr></table></figure>
-
-<p>git config –global credential.helper store</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. set by yourselef</span><br></pre></td></tr></table></figure>
-
-<p>git config –global user.name “your username”<br>git config –global user.password “your password”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## rename file or  directories in linux</span><br></pre></td></tr></table></figure>
-
-<p>mv [OPTIONS] source destination<br>```</p>
+<p>HEAD^的意思是上一个版本，也可以写成HEAD<del>1
+撤回多次就</del>N</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sherryWeb.com/2019/06/25/nginx/" data-id="cjxczfg0q0004ohad3m4rw5wz" class="article-share-link">Share</a>
+      <a data-url="http://sherryWeb.com/2019/06/26/git/" data-id="cjxd0tijf0002g5adnlisb0r0" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/06/25/403-error-solution-for-nginx-in-linux/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          403 error solution for nginx in linux
-        
-      </div>
-    </a>
   
+    <a href="/2019/06/26/linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">linux</div>
+    </a>
   
 </nav>
 
@@ -187,7 +183,7 @@
     <div class="count-box">
       <a href="/archives"><div><strong>3</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
     </div>
 
 
