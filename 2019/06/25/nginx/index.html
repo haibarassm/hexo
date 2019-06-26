@@ -5,18 +5,18 @@
   
   <title>403 error solution for nginx in linux | sherryWeb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nginx 403 error solution Check the permissions on /,/root,/root/hexo/,/root/hexo/publictips : To easily display all the permissions on a path, you can use namei -om /path/to/check  To check if SELinux">
+  <meta name="description" content="nginxnginx start/restart1234sudo systemctl start nginx  ``` after something change remember to reload nginx## firewall config  sudo firewall-cmd –permanent –zone=public –add-service=httpsudo firewall-">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="403 error solution for nginx in linux">
-<meta property="og:url" content="http://sherryWeb.com/2019/06/25/403-error-solution-for-nginx-in-linux/index.html">
+<meta property="og:url" content="http://sherryWeb.com/2019/06/25/nginx/index.html">
 <meta property="og:site_name" content="sherryWeb">
-<meta property="og:description" content="nginx 403 error solution Check the permissions on /,/root,/root/hexo/,/root/hexo/publictips : To easily display all the permissions on a path, you can use namei -om /path/to/check  To check if SELinux">
+<meta property="og:description" content="nginxnginx start/restart1234sudo systemctl start nginx  ``` after something change remember to reload nginx## firewall config  sudo firewall-cmd –permanent –zone=public –add-service=httpsudo firewall-">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-25T07:40:23.492Z">
+<meta property="og:updated_time" content="2019-06-26T08:33:43.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="403 error solution for nginx in linux">
-<meta name="twitter:description" content="nginx 403 error solution Check the permissions on /,/root,/root/hexo/,/root/hexo/publictips : To easily display all the permissions on a path, you can use namei -om /path/to/check  To check if SELinux">
+<meta name="twitter:description" content="nginxnginx start/restart1234sudo systemctl start nginx  ``` after something change remember to reload nginx## firewall config  sudo firewall-cmd –permanent –zone=public –add-service=httpsudo firewall-">
   
     <link rel="alternate" href="/atom.xml" title="sherryWeb" type="application/atom+xml">
   
@@ -69,9 +69,9 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-403-error-solution-for-nginx-in-linux" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-nginx" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/25/403-error-solution-for-nginx-in-linux/" class="article-date">
+    <a href="/2019/06/25/nginx/" class="article-date">
   <time class="post-time" datetime="2019-06-25T07:24:03.000Z" itemprop="datePublished">
     <span class="post-month">6月</span><br/>
     <span class="post-day">25</span>
@@ -101,23 +101,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="nginx-403-error-solution"><a href="#nginx-403-error-solution" class="headerlink" title="nginx 403 error solution"></a>nginx 403 error solution</h2><ol>
-<li><p>Check the permissions on /,/root,/root/hexo/,/root/hexo/public<br>tips : To easily display all the permissions on a path, you can use namei -om /path/to/check</p>
-</li>
-<li><p>To check if SELinux is running</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getenforce</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>To disable SELinux until next reboot</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenforce Permissive</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Restart Nginx and see if the problem persists. To allow nginx to serve your www directory (make sure you turn SELinux back on before testing this. i.e, setenforce Enforcing)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chcon -Rt httpd_sys_content_t /root/hexo/public</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><h2 id="nginx-start-restart"><a href="#nginx-start-restart" class="headerlink" title="nginx start/restart"></a>nginx start/restart</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx  </span><br><span class="line">``` </span><br><span class="line">after something change remember to reload nginx</span><br><span class="line">## firewall config</span><br></pre></td></tr></table></figure>
+
+<p>sudo firewall-cmd –permanent –zone=public –add-service=http<br>sudo firewall-cmd –permanent –zone=public –add-service=https<br>sudo firewall-cmd –reload</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## check the nginx status</span><br></pre></td></tr></table></figure>
+
+<p>sudo systemctl status nginx  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## set username and password of git groblelly in linux </span><br><span class="line">1. When running this command, the first time you pull or push from the remote repository, you&apos;ll get asked about the username and password.  </span><br><span class="line">Afterwards, for consequent communications with the remote repository you don&apos;t have to provide the username and password</span><br></pre></td></tr></table></figure>
+
+<p>git config –global credential.helper store</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. set by yourselef</span><br></pre></td></tr></table></figure>
+
+<p>git config –global user.name “your username”<br>git config –global user.password “your password”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## rename file or  directories in linux</span><br></pre></td></tr></table></figure>
+
+<p>mv [OPTIONS] source destination<br>```</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sherryWeb.com/2019/06/25/403-error-solution-for-nginx-in-linux/" data-id="cjxczfg0d0000ohad43b5dw7n" class="article-share-link">Share</a>
+      <a data-url="http://sherryWeb.com/2019/06/25/nginx/" data-id="cjxczfg0q0004ohad3m4rw5wz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,20 +129,15 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/06/25/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/06/25/403-error-solution-for-nginx-in-linux/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Hello World
+          403 error solution for nginx in linux
         
       </div>
     </a>
   
-  
-    <a href="/2019/06/25/nginx/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">403 error solution for nginx in linux</div>
-    </a>
   
 </nav>
 

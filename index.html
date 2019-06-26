@@ -39,7 +39,7 @@
     <h2 class="author">sherry cai</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
       <a href="/tags"><div><strong>0</strong><br>标签</div></a>
     </div>
@@ -116,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sherryWeb.com/2019/06/25/hello-world/" data-id="cjxcyiofy0002vaadey1eisq5" class="article-share-link">Share</a>
+      <a data-url="http://sherryWeb.com/2019/06/25/hello-world/" data-id="cjxczfg0n0002ohad3ye5dt07" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +176,70 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sherryWeb.com/2019/06/25/403-error-solution-for-nginx-in-linux/" data-id="cjxcyiofr0000vaadmusrn75n" class="article-share-link">Share</a>
+      <a data-url="http://sherryWeb.com/2019/06/25/403-error-solution-for-nginx-in-linux/" data-id="cjxczfg0d0000ohad43b5dw7n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-nginx" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/25/nginx/" class="article-date">
+  <time class="post-time" datetime="2019-06-25T07:24:03.000Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">25</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/25/nginx/">403 error solution for nginx in linux</a>
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><h2 id="nginx-start-restart"><a href="#nginx-start-restart" class="headerlink" title="nginx start/restart"></a>nginx start/restart</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx  </span><br><span class="line">``` </span><br><span class="line">after something change remember to reload nginx</span><br><span class="line">## firewall config</span><br></pre></td></tr></table></figure>
+
+<p>sudo firewall-cmd –permanent –zone=public –add-service=http<br>sudo firewall-cmd –permanent –zone=public –add-service=https<br>sudo firewall-cmd –reload</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## check the nginx status</span><br></pre></td></tr></table></figure>
+
+<p>sudo systemctl status nginx  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## set username and password of git groblelly in linux </span><br><span class="line">1. When running this command, the first time you pull or push from the remote repository, you&apos;ll get asked about the username and password.  </span><br><span class="line">Afterwards, for consequent communications with the remote repository you don&apos;t have to provide the username and password</span><br></pre></td></tr></table></figure>
+
+<p>git config –global credential.helper store</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. set by yourselef</span><br></pre></td></tr></table></figure>
+
+<p>git config –global user.name “your username”<br>git config –global user.password “your password”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## rename file or  directories in linux</span><br></pre></td></tr></table></figure>
+
+<p>mv [OPTIONS] source destination<br>```</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sherryWeb.com/2019/06/25/nginx/" data-id="cjxczfg0q0004ohad3m4rw5wz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -228,7 +291,7 @@
     <h2 class="author">sherry cai</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
       <a href="/tags"><div><strong>0</strong><br>标签</div></a>
     </div>
