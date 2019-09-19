@@ -9,11 +9,11 @@
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux">
-<meta property="og:url" content="http://sherryWeb.com/2019/06/26/linux/index.html">
+<meta property="og:url" content="http://sherryWeb.com/2019/09/19/linux/index.html">
 <meta property="og:site_name" content="sherryWeb">
 <meta property="og:description" content="basic optionrename file or  directories in linux1mv [OPTIONS] source destination  cp1cp -r   源目录 目标目录  1cp  源文件 目标文件  reload source配置文件目录   1source /etc/profile  ports1ss -tunlp  查询端口号占用情况    user1sud">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-06-26T09:14:26.218Z">
+<meta property="og:updated_time" content="2019-09-19T02:37:41.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux">
 <meta name="twitter:description" content="basic optionrename file or  directories in linux1mv [OPTIONS] source destination  cp1cp -r   源目录 目标目录  1cp  源文件 目标文件  reload source配置文件目录   1source /etc/profile  ports1ss -tunlp  查询端口号占用情况    user1sud">
@@ -71,10 +71,10 @@
 
         <section id="main"><article id="post-linux" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/26/linux/" class="article-date">
-  <time class="post-time" datetime="2019-06-26T16:37:03.000Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">26</span>
+    <a href="/2019/09/19/linux/" class="article-date">
+  <time class="post-time" datetime="2019-09-19T10:32:03.000Z" itemprop="datePublished">
+    <span class="post-month">9月</span><br/>
+    <span class="post-day">19</span>
   </time>
 </a>
    
@@ -145,21 +145,37 @@
 <p>压缩</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip FileName.zip DirName</span><br></pre></td></tr></table></figure>
 
-<h2 id="mongodb-install-tips"><a href="#mongodb-install-tips" class="headerlink" title="mongodb install tips"></a>mongodb install tips</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/mongod.conf</span><br></pre></td></tr></table></figure>
+<p>##</p>
+<h3 id="mongodb-install-tips"><a href="#mongodb-install-tips" class="headerlink" title="mongodb install tips"></a>mongodb install tips</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/mongod.conf</span><br></pre></td></tr></table></figure>
 
 <p>change bindIp from 127.0.0.1 to 0.0.0.0<br>(# Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.)</p>
+<h3 id="mongodb-remove-steps"><a href="#mongodb-remove-steps" class="headerlink" title="mongodb remove steps"></a>mongodb remove steps</h3><ol>
+<li><p>Stop MongoDB</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop mongod</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Remove Packages</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum erase $(rpm -qa | grep mongodb-org)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Remove Data Directories.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -r /var/log/mongodb</span><br><span class="line">sudo rm -r /var/lib/mongo</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>if don’t excute step 3 ,you will receive error like unchecked users or so on when you reinstall mongodb</p>
 <h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><h3 id="nginx-start-amp-restart"><a href="#nginx-start-amp-restart" class="headerlink" title="nginx start&amp;restart"></a>nginx start&amp;restart</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx</span><br></pre></td></tr></table></figure>
 
 <p>after something change remember to reload nginx</p>
 <h3 id="check-the-nginx-status"><a href="#check-the-nginx-status" class="headerlink" title="check the nginx status"></a>check the nginx status</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status nginx</span><br></pre></td></tr></table></figure>
 
-<h2 id="firewall"><a href="#firewall" class="headerlink" title="firewall"></a>firewall</h2><h3 id="firewall-config"><a href="#firewall-config" class="headerlink" title="firewall config"></a>firewall config</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=http </span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=https</span><br><span class="line">sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+<h2 id="firewall"><a href="#firewall" class="headerlink" title="firewall"></a>firewall</h2><h3 id="firewall-config"><a href="#firewall-config" class="headerlink" title="firewall config"></a>firewall config</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=http </span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-service=https</span><br><span class="line">sudo firewall-cmd --permanent --zone=public --add-port=1024-65535/tcp  </span><br><span class="line">sudo firewall-cmd --reload</span><br><span class="line">sudo firewall-cmd --state</span><br></pre></td></tr></table></figure>
 
+<h2 id="consul"><a href="#consul" class="headerlink" title="consul"></a>consul</h2><h3 id="run-agent-with"><a href="#run-agent-with" class="headerlink" title="run agent with"></a>run agent with</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">consul agent -dev  -client 0.0.0.0 -ui</span><br></pre></td></tr></table></figure>
 
+<h2 id="rpm-unzip-code"><a href="#rpm-unzip-code" class="headerlink" title="rpm unzip code"></a>rpm unzip code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -i filename.rpm</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sherryWeb.com/2019/06/26/linux/" data-id="cjxd0tijk0005g5adaz45934j" class="article-share-link">Share</a>
+      <a data-url="http://sherryWeb.com/2019/09/19/linux/" data-id="ck0q35wfm0000o7adivm6bdl0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
@@ -170,19 +186,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/06/26/git/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          git
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/25/403-error-solution-for-nginx-in-linux/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/06/26/git/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">403 error solution for nginx in linux</div>
+      <div class="article-nav-title">git</div>
     </a>
   
 </nav>
