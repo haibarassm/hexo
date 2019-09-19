@@ -1,11 +1,9 @@
-# hexo
-## install
-npm install -g hexo-cli
-## uninstall
-npm uninstall -g hexo-cli  
-## deplay
-hexo g -d
-
+---
+title: 403 error solution for nginx in linux
+date: 2019-06-25 07:24:03
+utcOffset: utf-8
+tags: linux
+---
 ## nginx 403 error solution
  1. Check the permissions on /,/root,/root/hexo/,/root/hexo/public  
  tips : To easily display all the permissions on a path, you can use namei -om /path/to/check

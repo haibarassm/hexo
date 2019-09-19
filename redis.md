@@ -3,7 +3,9 @@
 1. sudo vi /etc/redis.conf
    restart redis
 2. login redis
+```
    CONFIG SET requirepass "passwd"
+```
    AUTH xxx （to test）
 ## Redis 数据类型
 Redis支持五种数据类型  
