@@ -1,5 +1,5 @@
 ---
-title: 403 error solution for nginx in linux
+title: Thread died in Berkeley DB library
 date: 2020-01-10 13:01:03
 utcOffset: utf-8
 tags: linux
